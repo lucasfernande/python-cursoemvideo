@@ -6,12 +6,12 @@ for i in range(5):
     if i == 0:
         maior = peso
         menor = peso
-    
-    if peso > maior:
-        maior = peso
+    else: 
+        if peso > maior:
+            maior = peso
 
-    if peso < menor:
-        menor = peso
+        if peso < menor:
+            menor = peso
 
 
 print(f'O maior peso digitado foi: {maior} kg')

@@ -1,11 +1,16 @@
 n = int(input('Digite um número: '))
-primo = True
+vezesDiv = 0
 
-for i in range(2, n):
+for i in range(1, n + 1):
     if n % i == 0:
-        primo = False  # se ocorrer alguma divisão exata, saberemos que o número não é primo
+        print(f'\033[32m {i}', end='')
+        vezesDiv += 1
+    else:
+        print(f'\033[31m {i}', end='')
 
-if primo:
-    print(f'{n} é primo!')
+print(f'\nO número {n} foi divisível {vezesDiv} vezes')
+
+if vezesDiv == 2: # apenas por 1 e por ele mesmo
+    print(f'{n} é um número primo!')
 else:
     print(f'{n} não é primo!')

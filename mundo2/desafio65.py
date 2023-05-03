@@ -1,21 +1,19 @@
 resp = 'S'
-maior = 0
-menor = 10000000000000000000000000000000000000000000
-soma = 0
-cont = 0
-
+soma = cont = maior = menor = 0
 
 while resp in 'Ss':
     n = float(input('Digite um número: '))
     cont += 1
     soma += n
 
-    if n > maior:
-        maior = n
-
-    if n < menor:
-        menor = n
-
+    if cont == 1:
+        maior = menor = n
+    else:
+        if n > maior:
+            maior = n
+        if n < menor:
+            menor = n
+        
     resp = str(input('Deseja adicionar outro número?: '))
 
 print(f'A média entre os valores digitados foi de: {soma / cont}')

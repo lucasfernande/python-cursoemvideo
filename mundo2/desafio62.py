@@ -1,17 +1,17 @@
 a = int(input('Digite o primeiro termo da PA: '))
 r = int(input('Digite a razão da PA: '))
-
 t = 1
-while t <= 10:
-    print(f'{a}', end=' => ')
-    a += r
-    t += 1
+mais = 10
+total = 0
 
-t = int(input('\nDeseja mostrar mais quantos termos? (0 para encerrar): '))
-cont = 1
-while cont <= t:
-    print(f'{a}', end=' => ')
-    a += r
-    cont += 1
+while mais != 0:
+    total += mais
+    while t <= total:
+        print(f'{a}', end=' => ')
+        a += r
+        t += 1
+    print('PAUSA')
+    mais = int(input('\nVocê deseja mostrar mais quantos termos?: '))
+print('FIM') 
 
-print('Fim')
+print(f'Foram mostrados {total} termos')
